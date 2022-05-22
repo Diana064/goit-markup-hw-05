@@ -27,9 +27,9 @@
           >
           <ul class="nav-list">
             <!--Begin nav-list-->
-            <li><a href="./index.html" class="active">Студия</a></li>
-            <li><a href="./portfolio.html">Портфолио</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a href="./index.html" class="nav-item active">Студия</a></li>
+            <li><a href="./portfolio.html" class='nav-item'>Портфолио</a></li>
+            <li><a href="" class='nav-item'>Контакты</a></li>
             <!--End nav-list-->
           </ul>
         </nav>
@@ -58,8 +58,17 @@
         <!--Begin hero-content-->
         <div class="hero-content container">
           <h1>Эффективные решения для вашего бизнеса</h1>
-          <button type="button">Заказать услугу</button>
+          <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
+        <!--Begin backdrop-->
+        <div class="backdrop is-hidden" data-modal >
+            <!--Begin modal-wrapper-->
+            <div class="modal-wrapper" >
+                <button type="button" class="modal-btn" data-modal-close>Х</button>
+            </div>
+            <!--End modal-wrapper-->
+        </div>
+        <!--End backdrop-->
         <!--End hero-content-->
       </section>
       <section class="quality section">
@@ -119,31 +128,32 @@
         </div>
         <!--End container-->
       </section>
-      <section class="section">
+      <section class="section work">
         <!--Begin container-->
-        <div class="container work">
+        <div class="container ">
           <h2>Чем мы занимаемся</h2>
           <ul>
-            <li>
+            <li class='work-link work-first'>
               <img
                 src="./images/main_page/what_we_will_do/1.jpg"
                 width="370"
                 alt="Опис занять на фірмі"
               />
             </li>
-            <li>
+            <li class='work-link work-second'>
               <img
                 src="./images/main_page/what_we_will_do/2.jpg"
                 width="370"
                 alt="Опис занять на фірмі"
               />
             </li>
-            <li>
+            <li class='work-link work-third'>
               <img
                 src="./images/main_page/what_we_will_do/3.jpg"
                 width="370"
                 alt="Опис занять на фірмі"
               />
+              <p></p>
             </li>
           </ul>
         </div>
@@ -426,5 +436,6 @@
       </div>
       <!--End -->
     </footer>
+    <script src='./js/modal.js'></script>
   </body>
 </html>
