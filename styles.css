@@ -144,8 +144,7 @@ nav a {
   letter-spacing: 0.02em;
   padding: 32px 0;
   display: block;
-  transition: fill var(--time) var(--time-cubic),
-    color var(--time) var(--time-cubic);
+  transition: color var(--time) var(--time-cubic);
 }
 .nav-item::after {
   display: block;
@@ -159,13 +158,20 @@ nav a {
   transition: width var(--time) var(--time-cubic);
 }
 
-.nav-item:hover::after {
+/* .nav-item:hover::after {
   width: 100%;
+} */
+.nav-item:hover,
+.nav-item:focus {
+  fill: var(--blue);
+  color: var(--blue);
 }
-.nav0item:hover,
-.nav-item:focus,
+
 .kontakt-list a:hover,
-.kontakt-list a:focus,
+.kontakt-list a:focus {
+  fill: var(--blue);
+  color: var(--blue);
+}
 .kontakt-list svg:hover,
 .kontakt-list svg:focus {
   fill: var(--blue);
@@ -379,7 +385,8 @@ nav a {
 .work-link:last-child {
   margin-right: 0;
 }
-.work-link::after {
+.work-link p {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,7 +404,25 @@ nav a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.work-first.work-link::after {
+/* .work-link::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+} */
+/* .work-first.work-link::after {
   content: "Десктопные приложения";
 }
 .work-second.work-link::after {
@@ -405,7 +430,7 @@ nav a {
 }
 .work-third.work-link::after {
   content: "Дизайнерские решения";
-}
+} */
 
 /* end section work */
 /* section team */
@@ -464,9 +489,11 @@ nav a {
   height: 44px;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--time) var(--time-cubic),
-    fill var(--time) var(--time-cubic),
-    border-radius var(--time) var(--time-cubic);
+  border-radius: 50%;
+  transition: background-color var(--time) var(--time-cubic);
+}
+.team .team-icon {
+  transition: fill var(--time) var(--time-cubic);
 }
 .team-link svg {
   width: 20px;
@@ -475,7 +502,6 @@ nav a {
 }
 .team-link a:hover,
 .team-link a:focus {
-  border-radius: 50%;
   background-color: var(--blue);
 }
 .team-link a:hover .team-icon,
@@ -566,8 +592,7 @@ footer {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: background-color var(--time) var(--time-cubic),
-    fill var(--time) var(--time-cubic);
+  transition: background-color var(--time) var(--time-cubic);
 }
 .links svg {
   background-color: transparent;
@@ -580,10 +605,7 @@ footer {
   border-radius: 50%;
   background-color: var(--blue);
 }
-.links a:hover .team-icon,
-.links a:focus .team-icon {
-  fill: var(--white);
-}
+
 .footer-logo {
   color: var(--white);
 }
@@ -673,6 +695,7 @@ address a:last-child {
 }
 .portfolio-link {
   display: block;
+  transition: box-shadow var(--time) var(--time-cubic);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
