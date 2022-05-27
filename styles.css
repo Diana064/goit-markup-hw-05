@@ -169,13 +169,11 @@ nav a {
 
 .kontakt-list a:hover,
 .kontakt-list a:focus {
-  fill: var(--blue);
   color: var(--blue);
 }
 .kontakt-list svg:hover,
 .kontakt-list svg:focus {
   fill: var(--blue);
-  color: var(--blue);
 }
 
 .kontakt-list {
@@ -199,8 +197,7 @@ nav a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
-  transition: fill var(--time) var(--time-cubic),
-    color var(--time) var(--time-cubic);
+  transition: color var(--time) var(--time-cubic);
 }
 .kontakt-list svg {
   margin-right: 10px;
@@ -228,7 +225,7 @@ nav a {
     ),
     url("./images/main_page/hero.jpg");
   background-position: center;
-  background-size: contain;
+
   margin: 0 auto;
 }
 
@@ -622,6 +619,9 @@ address {
 address a:hover {
   color: var(--white);
 }
+address a {
+  transition: color var(--time) var(--time-cubic);
+}
 
 address p {
   color: var(--white);
@@ -640,6 +640,12 @@ address a:last-child {
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 9px;
+}
+.footer-info li {
+  margin-bottom: 9px;
+}
+.footer-info li:last-child {
+  margin-bottom: 0px;
 }
 /* end footer */
 /* end main page */
